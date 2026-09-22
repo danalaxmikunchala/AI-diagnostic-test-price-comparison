@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Test Price Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="card">
+            <h1>Diagnostic Test Price Comparison</h1>
+            <p class="subtitle">Search by typing, selecting area, or asking AI assistant</p>
+
+            <div class="search-section">
+                <input list="testList" id="testInput" placeholder="Type test name">
+                <datalist id="testList"></datalist>
+
+                <select id="citySelect">
+                    <option value="">Select City</option>
+                </select>
+
+                <select id="areaSelect">
+                    <option value="">Select Area</option>
+                </select>
+
+                <button onclick="searchTests()">Search</button>
+            </div>
+
+            <hr>
+
+            <div class="upload-section">
+                <input type="file" id="prescriptionFile">
+                <button onclick="uploadPrescription()">Upload Prescription</button>
+            </div>
+        </div>
+
+        <div id="resultSection" class="result-section"></div>
+    </div>
+
+    <button class="chat-icon" onclick="toggleChat()">Ask AI</button>
+
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <h3>AI Assistant</h3>
+            <button onclick="toggleChat()">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+            <p class="bot">Hi! Ask me: Which lab is cheapest for blood test in Ramnagar?</p>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userMessage" placeholder="Ask about test price or location...">
+            <button class="mic-btn" onclick="startVoiceInput()" title="Speak">🎤</button>
+            <button onclick="askAI()">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
