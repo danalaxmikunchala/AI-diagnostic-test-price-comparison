@@ -2,119 +2,107 @@
 
 ## About the Project
 
-Diagnostic Test Price Comparison is a web application developed to simplify the process of exploring diagnostic tests and laboratory prices.
+AI Diagnostic Test Price Comparison is a web application developed to help users explore diagnostic tests and compare laboratory prices based on available data.
 
-The application brings test names, laboratory details, locations, and sample prices together in a single interface. Users can select a test and location to view available laboratory options and compare the prices provided in the dataset.
+The application allows users to search for diagnostic tests, select a location, view available laboratories, compare listed prices, and open navigation directions for a selected laboratory.
 
-The project also provides an interactive assistant that can respond to queries related to diagnostic tests, laboratories, and locations. Voice input is supported through the browser.
+It also includes an interactive assistant that can handle queries related to diagnostic tests, laboratories, prices, and locations. Voice input is supported through the browser.
 
 This project was developed as a collaborative academic project.
 
 ---
 
-## Project Goal
+## Project Objectives
 
-The goal of the application is to provide an easy-to-use platform for exploring diagnostic laboratory information.
+The main objectives of this project are:
 
-Instead of manually checking different laboratory sources, users can use the application to:
-
-- Search for a required diagnostic test
-- Select a city or area
-- View available laboratories
-- Compare the listed test prices
-- Identify a lower-priced option from the available data
-- Open navigation directions for a selected laboratory
-- Interact with the assistant using text or voice
+- To provide an easy way to search for diagnostic tests
+- To display laboratory options based on location
+- To compare diagnostic test prices
+- To identify lower-priced options from the available dataset
+- To provide laboratory location and navigation support
+- To provide an interactive text and voice-based assistant
+- To present diagnostic laboratory information through a simple web interface
 
 ---
 
-## What the Application Does
+## Key Features
 
-The application combines a Flask backend with a web-based user interface.
-
-When a user selects a diagnostic test and location, the Flask application processes the request and retrieves the matching records from the laboratory dataset.
-
-The results are then displayed through the web interface, allowing users to examine the available laboratory options and their listed prices.
-
----
-
-## Core Functionalities
-
-### Diagnostic Test Search
+### 1. Diagnostic Test Search
 
 Users can search for diagnostic tests available in the dataset.
 
-### Laboratory Comparison
+### 2. Location-Based Search
 
-The application displays multiple laboratory options and their corresponding prices so that users can compare them.
+Users can select a city or area to find relevant laboratory options.
 
-### Location Filtering
+### 3. Price Comparison
 
-City and area information can be used to narrow the available results.
+The application displays the listed prices of diagnostic tests from different laboratories so users can compare them.
 
-### Price Analysis
+### 4. Lower-Priced Option
 
-The application can identify the lower-priced laboratory option among the matching records available in the dataset.
+The application can identify a lower-priced laboratory option among the matching records available in the dataset.
 
-### Laboratory Navigation
+### 5. Laboratory Information
 
-A selected laboratory can be opened through a Google Maps direction link for navigation.
+Users can view laboratory names and related location information.
 
-### Interactive Assistant
+### 6. Navigation
 
-The assistant accepts natural-language questions about tests, laboratories, prices, and areas.
+Users can open Google Maps directions for a selected laboratory.
 
-### Voice Interaction
+### 7. Interactive Assistant
 
-Users can provide queries through microphone input using browser-based speech recognition.
+The application provides an interactive assistant for queries related to:
+
+- Diagnostic tests
+- Laboratory names
+- Prices
+- Locations
+- Available services
+
+### 8. Voice Input
+
+Users can provide queries using microphone input through browser-based speech recognition.
 
 ---
 
-## Technologies and Tools
-
-The project uses the following technologies:
+## Technologies Used
 
 | Technology | Purpose |
 |------------|---------|
 | Python | Application development |
-| Flask | Web application backend |
+| Flask | Backend web framework |
 | Pandas | Data processing |
 | HTML | Web page structure |
 | CSS | User interface styling |
 | JavaScript | Frontend interaction |
-| CSV | Laboratory and test dataset |
-| Google Maps | Laboratory navigation |
+| CSV | Diagnostic test and laboratory dataset |
+| Google Maps | Navigation |
 | Web Speech API | Voice input |
 
 ---
 
-## System Flow
+## Project Structure
 
 ```text
-User
-  |
-  v
-Web Interface
-  |
-  v
-Search / Filter / Assistant Query
-  |
-  v
-Flask Backend
-  |
-  v
-Pandas Data Processing
-  |
-  v
-Laboratory Dataset
-  |
-  v
-Results
-  |
-  +---- Test Information
-  |
-  +---- Laboratory Details
-  |
-  +---- Price Comparison
-  |
-  +---- Navigation
+AI-diagnostic-test-price-comparison/
+│
+├── app.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── data/
+│   └── lab_prices.csv
+│
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   └── js/
+│       └── script.js
+│
+└── templates/
+    └── index.html
